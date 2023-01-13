@@ -9,7 +9,6 @@ import '@openzeppelin/contracts/security/ReentrancyGuard.sol';
 
 contract MutantAlpha is ERC721AQueryable, Ownable, ReentrancyGuard {
 
-  using Strings for uint256;
 
   bytes32 public merkleRoot;
   mapping(address => bool) public whitelistClaimed;
