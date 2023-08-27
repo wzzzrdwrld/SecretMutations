@@ -76,7 +76,7 @@ contract MutantAlpha is ERC721AQueryable, Ownable, ReentrancyGuard {
     return 1;
   }
 
-  function tokenURI(uint256 _tokenId) public view virtual override returns (string memory) {
+  function tokenURI(uint256 _tokenId) public view virtual override (ERC721A,IERC721A)returns (string memory) {
     require(_exists(_tokenId), 'ERC721Metadata: URI query for nonexistent token');
 
     if (revealed == false) {
