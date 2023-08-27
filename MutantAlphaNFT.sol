@@ -6,8 +6,9 @@ import 'erc721a/contracts/extensions/ERC721AQueryable.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 import '@openzeppelin/contracts/utils/cryptography/MerkleProof.sol';
 import '@openzeppelin/contracts/security/ReentrancyGuard.sol';
+import '@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol';
 
-contract MutantAlpha is ERC721AQueryable, Ownable, ReentrancyGuard {
+contract MutantAlpha is ERC721AQueryable, Ownable, ReentrancyGuard, IERC721Reciever {
 
 
   bytes32 public merkleRoot;
